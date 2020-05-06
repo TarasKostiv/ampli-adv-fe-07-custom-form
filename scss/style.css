@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=Jost:400,400i,700,700i,900,900i&display=swap");
+.content-center, .wrapper, form, form fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: "Jost", sans-serif;
+  color: white;
+}
+
+a {
+  color: inherit;
+}
+
+.wrapper {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bdc3c7), to(#2c3e50));
+  background: linear-gradient(to bottom, #bdc3c7, #2c3e50);
+}
+
+.form_wrapper {
+  width: 400px;
+  -webkit-box-shadow: 0px 35px 58px -9px rgba(0, 0, 0, 0.36);
+          box-shadow: 0px 35px 58px -9px rgba(0, 0, 0, 0.36);
+  border-radius: 4px;
+  background: #545454;
+}
+
+form {
+  font-size: 1.4em;
+}
+
+form fieldset {
+  margin: 0;
+  padding: 15px;
+  padding-bottom: 30px;
+  border: none;
+  position: relative;
+}
+
+form fieldset legend {
+  font-size: 2em;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  top: 25px;
+  left: 0;
+}
+
+form .input_wrapper {
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+form .input_wrapper label[for="email"] {
+  position: absolute;
+  z-index: 2;
+  top: 25px;
+}
+
+form .input_wrapper input[type="email"],
+form .input_wrapper input[type="text"],
+form .input_wrapper input[type="password"] {
+  position: relative;
+  font-family: "Jost", sans-serif;
+  font-size: 0.9em;
+  width: 100%;
+  border: none;
+  color: white;
+  border-bottom: 1px solid #bfbfbf;
+  outline: none;
+  padding-top: 25px;
+  background: none;
+}
+
+form .input_wrapper input[type="email"]:nth-of-type(3),
+form .input_wrapper input[type="text"]:nth-of-type(3),
+form .input_wrapper input[type="password"]:nth-of-type(3) {
+  margin-bottom: 15px;
+}
+
+form .input_wrapper input[type="email"]::-webkit-input-placeholder,
+form .input_wrapper input[type="text"]::-webkit-input-placeholder,
+form .input_wrapper input[type="password"]::-webkit-input-placeholder {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #bfbfbf;
+}
+
+form .input_wrapper input[type="email"]:-ms-input-placeholder,
+form .input_wrapper input[type="text"]:-ms-input-placeholder,
+form .input_wrapper input[type="password"]:-ms-input-placeholder {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #bfbfbf;
+}
+
+form .input_wrapper input[type="email"]::-ms-input-placeholder,
+form .input_wrapper input[type="text"]::-ms-input-placeholder,
+form .input_wrapper input[type="password"]::-ms-input-placeholder {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #bfbfbf;
+}
+
+form .input_wrapper input[type="email"]::placeholder,
+form .input_wrapper input[type="text"]::placeholder,
+form .input_wrapper input[type="password"]::placeholder {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #bfbfbf;
+}
+
+form .input_wrapper input[type="email"]:focus,
+form .input_wrapper input[type="text"]:focus,
+form .input_wrapper input[type="password"]:focus {
+  border-bottom: 1px solid white;
+}
+
+form .input_wrapper input[type="email"]:focus::-webkit-input-placeholder,
+form .input_wrapper input[type="text"]:focus::-webkit-input-placeholder,
+form .input_wrapper input[type="password"]:focus::-webkit-input-placeholder {
+  position: relative;
+  z-index: 4;
+  color: white;
+  font-size: 0.75em;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+}
+
+form .input_wrapper input[type="email"]:focus:-ms-input-placeholder,
+form .input_wrapper input[type="text"]:focus:-ms-input-placeholder,
+form .input_wrapper input[type="password"]:focus:-ms-input-placeholder {
+  position: relative;
+  z-index: 4;
+  color: white;
+  font-size: 0.75em;
+  transform: translateY(-25px);
+}
+
+form .input_wrapper input[type="email"]:focus::-ms-input-placeholder,
+form .input_wrapper input[type="text"]:focus::-ms-input-placeholder,
+form .input_wrapper input[type="password"]:focus::-ms-input-placeholder {
+  position: relative;
+  z-index: 4;
+  color: white;
+  font-size: 0.75em;
+  transform: translateY(-25px);
+}
+
+form .input_wrapper input[type="email"]:focus::placeholder,
+form .input_wrapper input[type="text"]:focus::placeholder,
+form .input_wrapper input[type="password"]:focus::placeholder {
+  position: relative;
+  z-index: 4;
+  color: white;
+  font-size: 0.75em;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+}
+
+form .gender_wrapper,
+form .terms_wrapper {
+  padding: 10px;
+}
+
+form .terms_wrapper p {
+  font-size: 0.6em;
+}
+
+form button[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  font-family: "Jost", sans-serif;
+  font-size: 1em;
+  padding: 10px;
+  background: none;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+form button[type="submit"]:hover {
+  background: white;
+  color: #545454;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 410px) {
+  .form_wrapper {
+    width: 100%;
+    border-radius: 0;
+  }
+}

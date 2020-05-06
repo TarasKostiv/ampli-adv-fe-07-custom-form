@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <title>Sign up</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form_wrapper">
+        <form>
+          <fieldset>
+            <legend>Sign up</legend>
+            <div class="input_wrapper" role="block">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+              /><br />
+              <!-- <label for="email">Email</label> -->
+
+              <!-- <label for="username">Username</label> -->
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Username"
+              /><br />
+
+              <!-- <label for="password">Password</label> -->
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+
+            <div class="gender_wrapper" role="block">
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="male" />
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="female" />
+            </div>
+
+            <div class="terms_wrapper" role="block">
+              <label for="terms">Terms</label>
+              <input type="checkbox" name="terms" id="terms" />
+              <label for="rules">Rules</label>
+              <input type="checkbox" name="rules" id="rules" />
+              <p>To read terms abd rules please click on <a href="">HERE</a></p>
+            </div>
+            <button type="submit">Sign up</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
