@@ -15,7 +15,7 @@
   <body>
     <div class="wrapper">
       <div class="form_wrapper">
-        <form>
+        <form method="get" action="https://ampli-html-forms.herokuapp.com/data">
           <fieldset>
             <legend>Sign up</legend>
             <div class="input_wrapper" role="block">
@@ -24,6 +24,7 @@
                 name="email"
                 id="email"
                 placeholder="Email"
+                required
               /><br />
               <!-- <label for="email">Email</label> -->
 
@@ -33,6 +34,7 @@
                 name="username"
                 id="username"
                 placeholder="Username"
+                required
               /><br />
 
               <!-- <label for="password">Password</label> -->
@@ -41,22 +43,35 @@
                 name="password"
                 id="password"
                 placeholder="Password"
+                required
               />
             </div>
 
             <div class="gender_wrapper" role="block">
-              <input type="radio" name="gender" id="male" />
+              <input
+                type="radio"
+                name="gender"
+                id="male"
+                value="male"
+                required
+              />
               <label for="male">Male</label>
 
-              <input type="radio" name="gender" id="female" />
+              <input
+                type="radio"
+                name="gender"
+                id="female"
+                value="female"
+                required
+              />
               <label for="female">Female</label>
             </div>
 
             <div class="terms_wrapper" role="block">
-              <input type="checkbox" name="terms" id="terms" />
+              <input type="checkbox" name="terms" id="terms" required />
               <label for="terms">Terms</label>
 
-              <input type="checkbox" name="rules" id="rules" />
+              <input type="checkbox" name="rules" id="rules" required />
               <label for="rules">Rules</label>
 
               <p>
