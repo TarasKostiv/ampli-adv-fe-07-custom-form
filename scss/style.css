@@ -276,6 +276,13 @@ form button[type="submit"]:hover {
 
 @media screen and (max-width: 410px) {
   .form_wrapper {
+    width: calc(100% - 20px);
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .form_wrapper {
     width: 100%;
     border-radius: 0;
   }
