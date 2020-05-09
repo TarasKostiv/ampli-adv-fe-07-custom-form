@@ -1,6 +1,10 @@
 @import "main-style";
 @import url("https://fonts.googleapis.com/css?family=Jost:400,400i,700,700i,900,900i&display=swap");
 
+$main-background: white;
+$main-color: #545454;
+$main-border: #bfbfbf;
+
 * {
   box-sizing: border-box;
 }
@@ -26,14 +30,16 @@ a {
 .wrapper {
   height: 100%;
   @extend .content-center;
-  background: linear-gradient(to bottom, #bdc3c7, #2c3e50);
+  background: #aa4b6b;
+  background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
 }
 
 .form_wrapper {
   width: 400px;
   box-shadow: 0px 35px 58px -9px rgba(0, 0, 0, 0.36);
   border-radius: 4px;
-  background: #545454;
+  background: $main-background;
+  color: $main-color;
 }
 
 form {
@@ -76,9 +82,9 @@ form {
       font-size: 0.9em;
       width: 100%;
       border: none;
-      color: white;
+      color: $main-color;
 
-      border-bottom: 1px solid #bfbfbf;
+      border-bottom: 1px solid $main-border;
       outline: none;
       padding-top: 25px;
       background: none;
@@ -93,12 +99,12 @@ form {
       }
 
       &:focus {
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid $main-color;
 
         &::placeholder {
           position: relative;
           z-index: 4;
-          color: white;
+          color: $main-color;
           font-size: 0.75em;
           transform: translateY(-25px);
         }
@@ -106,12 +112,70 @@ form {
     }
   }
 
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
   .gender_wrapper,
   .terms_wrapper {
     padding: 10px;
+    color: inherit;
+  }
+
+  .gender_wrapper {
+    label {
+      position: relative;
+      cursor: pointer;
+      margin-right: 20px;
+      &::after {
+        transition: background 0.2s;
+        content: "";
+        position: absolute;
+        top: 7px;
+        height: 14px;
+        width: 14px;
+        border: 2px solid $main-color;
+        border-radius: 50%;
+        margin-left: 2px;
+      }
+    }
+
+    input[type="radio"]:checked + label {
+      &::after {
+        background: $main-color;
+      }
+    }
   }
 
   .terms_wrapper {
+    label {
+      position: relative;
+      cursor: pointer;
+      margin-right: 20px;
+      &::after {
+        transition: background 0.2s;
+        content: "";
+        position: absolute;
+        top: 7px;
+        height: 14px;
+        width: 14px;
+        border: 2px solid $main-color;
+        border-radius: 4px;
+        margin-left: 2px;
+      }
+    }
+
+    input[type="checkbox"]:checked + label {
+      &::after {
+        background: url("../img/check-solid.svg"), $main-color;
+      }
+    }
+
     p {
       font-size: 0.6em;
     }
@@ -124,15 +188,15 @@ form {
     font-size: 1em;
     padding: 10px;
     background: none;
-    border: 1px solid white;
+    border: 1px solid $main-color;
     border-radius: 4px;
-    color: white;
+    color: $main-color;
     cursor: pointer;
     transition: all 0.2s;
 
     &:hover {
-      background: white;
-      color: #545454;
+      background: $main-color;
+      color: $main-background;
       font-weight: 700;
     }
   }

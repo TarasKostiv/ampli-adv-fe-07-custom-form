@@ -40,8 +40,9 @@ a {
 
 .wrapper {
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#bdc3c7), to(#2c3e50));
-  background: linear-gradient(to bottom, #bdc3c7, #2c3e50);
+  background: #aa4b6b;
+  background: -webkit-gradient(linear, left top, right top, from(#aa4b6b), color-stop(#6b6b83), to(#3b8d99));
+  background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
 }
 
 .form_wrapper {
@@ -49,7 +50,8 @@ a {
   -webkit-box-shadow: 0px 35px 58px -9px rgba(0, 0, 0, 0.36);
           box-shadow: 0px 35px 58px -9px rgba(0, 0, 0, 0.36);
   border-radius: 4px;
-  background: #545454;
+  background: white;
+  color: #545454;
 }
 
 form {
@@ -93,7 +95,7 @@ form .input_wrapper input[type="password"] {
   font-size: 0.9em;
   width: 100%;
   border: none;
-  color: white;
+  color: #545454;
   border-bottom: 1px solid #bfbfbf;
   outline: none;
   padding-top: 25px;
@@ -141,7 +143,7 @@ form .input_wrapper input[type="password"]::placeholder {
 form .input_wrapper input[type="email"]:focus,
 form .input_wrapper input[type="text"]:focus,
 form .input_wrapper input[type="password"]:focus {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #545454;
 }
 
 form .input_wrapper input[type="email"]:focus::-webkit-input-placeholder,
@@ -149,7 +151,7 @@ form .input_wrapper input[type="text"]:focus::-webkit-input-placeholder,
 form .input_wrapper input[type="password"]:focus::-webkit-input-placeholder {
   position: relative;
   z-index: 4;
-  color: white;
+  color: #545454;
   font-size: 0.75em;
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
@@ -160,7 +162,7 @@ form .input_wrapper input[type="text"]:focus:-ms-input-placeholder,
 form .input_wrapper input[type="password"]:focus:-ms-input-placeholder {
   position: relative;
   z-index: 4;
-  color: white;
+  color: #545454;
   font-size: 0.75em;
   transform: translateY(-25px);
 }
@@ -170,7 +172,7 @@ form .input_wrapper input[type="text"]:focus::-ms-input-placeholder,
 form .input_wrapper input[type="password"]:focus::-ms-input-placeholder {
   position: relative;
   z-index: 4;
-  color: white;
+  color: #545454;
   font-size: 0.75em;
   transform: translateY(-25px);
 }
@@ -180,15 +182,71 @@ form .input_wrapper input[type="text"]:focus::placeholder,
 form .input_wrapper input[type="password"]:focus::placeholder {
   position: relative;
   z-index: 4;
-  color: white;
+  color: #545454;
   font-size: 0.75em;
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
 }
 
+form input[type="checkbox"],
+form input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
 form .gender_wrapper,
 form .terms_wrapper {
   padding: 10px;
+  color: inherit;
+}
+
+form .gender_wrapper label {
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+form .gender_wrapper label::after {
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  content: "";
+  position: absolute;
+  top: 7px;
+  height: 14px;
+  width: 14px;
+  border: 2px solid #545454;
+  border-radius: 50%;
+  margin-left: 2px;
+}
+
+form .gender_wrapper input[type="radio"]:checked + label::after {
+  background: #545454;
+}
+
+form .terms_wrapper label {
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+form .terms_wrapper label::after {
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  content: "";
+  position: absolute;
+  top: 7px;
+  height: 14px;
+  width: 14px;
+  border: 2px solid #545454;
+  border-radius: 4px;
+  margin-left: 2px;
+}
+
+form .terms_wrapper input[type="checkbox"]:checked + label::after {
+  background: url("../img/check-solid.svg"), #545454;
 }
 
 form .terms_wrapper p {
@@ -202,17 +260,17 @@ form button[type="submit"] {
   font-size: 1em;
   padding: 10px;
   background: none;
-  border: 1px solid white;
+  border: 1px solid #545454;
   border-radius: 4px;
-  color: white;
+  color: #545454;
   cursor: pointer;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 form button[type="submit"]:hover {
-  background: white;
-  color: #545454;
+  background: #545454;
+  color: white;
   font-weight: 700;
 }
 

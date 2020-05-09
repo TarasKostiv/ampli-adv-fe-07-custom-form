@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./scss/style.css" />
-    <link rel="icon" href="./key-solid.svg" type="image/svg" sizes="16x16" />
+    <link
+      rel="icon"
+      href="./img/key-solid.svg"
+      type="image/svg"
+      sizes="16x16"
+    />
     <title>Sign up</title>
   </head>
   <body>
@@ -40,18 +45,23 @@
             </div>
 
             <div class="gender_wrapper" role="block">
-              <label for="male">Male</label>
               <input type="radio" name="gender" id="male" />
-              <label for="female">Female</label>
+              <label for="male">Male</label>
+
               <input type="radio" name="gender" id="female" />
+              <label for="female">Female</label>
             </div>
 
             <div class="terms_wrapper" role="block">
-              <label for="terms">Terms</label>
               <input type="checkbox" name="terms" id="terms" />
-              <label for="rules">Rules</label>
+              <label for="terms">Terms</label>
+
               <input type="checkbox" name="rules" id="rules" />
-              <p>To read terms abd rules please click on <a href="">HERE</a></p>
+              <label for="rules">Rules</label>
+
+              <p>
+                To read terms abd rules please click on <a href="#">HERE</a>
+              </p>
             </div>
             <button type="submit">Sign up</button>
           </fieldset>
